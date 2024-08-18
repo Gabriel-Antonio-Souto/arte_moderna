@@ -68,21 +68,82 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
-#mainNav{
-    background: rgba(0, 0, 0, 0.29);
-    backdrop-filter: blur(10.5px);
-    -webkit-backdrop-filter: blur(10.5px);
-}
-#mainNav a{
-    color: white;
-}
 .btn_masthead{
     color: white;
     background-color: #343F52;
     width: 210px;
     padding: 10px;
     margin-top: 30px;
+    font-size: small;
+   
 }
+
+
+/*Menu*/
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+.navbar.active {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10.5px);
+    -webkit-backdrop-filter: blur(10.5px);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar #box_navbar{
+    color:#fff;
+    font-size:28px;
+}
+
+.navbar.active #box_navbar{
+    color:#000000;
+    font-size:28px;
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: rgba(0, 0, 0, 0.29);
+        backdrop-filter: blur(10.5px);
+        -webkit-backdrop-filter: blur(10.5px);
+    
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: white;
+    }
+}
+
 
 /* sobre */
 #sobre .main{
@@ -750,45 +811,4 @@ body::-webkit-scrollbar-thumb {
         margin-left: 0;
         margin-right: 0;
     } 
-}
-
-/* Galeria */
-
-#container{
-    width: 1400px;
-    margin: 20px auto;
-    columns: 4;
-    column-gap: 20px;
-}
-
-#container .box { 
-    width: 100%;
-    margin-bottom: 20px;
-    break-inside: avoid;
-
-}
-
-#container .box img{ 
-    max-width: 100%;
-    border-radius: 15px;
-}
-
-@media (max-width: 1200px){
-    #container{
-        width: calc(100% - 40px);
-        columns: 3;
-    }
-}
-
-@media (max-width: 768px){
-    #container{
-        width: calc(100% - 40px);
-        columns: 2;
-    }
-}
-
-@media (max-width: 480px){
-    #container{
-        columns: 1;
-    }
 }
